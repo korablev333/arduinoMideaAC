@@ -58,8 +58,6 @@ typedef struct {
 class acSerial {
   public:
 #ifdef __AVR__
-    typedef void (*acSerialEvent)(ac_status_t * status);
-#else
     typedef std::function<void(ac_status_t * status)> acSerialEvent;
 #endif
 
